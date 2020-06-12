@@ -4,12 +4,12 @@
   "builds": [{ "src": "index.js", "use": "@now/node-server" }],
   "routes": [
     {
-      "src": "/",
-      "dest": "index.js",
+      "src": "index.js",
+      "dest": "/",
     },
     {
-      "src": "/api/books/.*",
-      "dest": "/routes/api/books.js"
+      "src": "/routes/api/books.js",
+      "dest": "/api/books/"
     }
   ]
 }
