@@ -1,0 +1,23 @@
+{
+  "name": "mongo01",
+  "version": 2,
+  "builds": [{ "src": "app.js", "use": "@now/node-server" }],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/routes/api/books.js",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/test",
+      "dest": "/routes/api/books.js",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/:id",
+      "dest": "/routes/api/books.js",
+      "methods": ["GET"]
+    }
+  ]
+}
+
