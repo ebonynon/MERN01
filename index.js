@@ -1,7 +1,7 @@
 // app.js
 
 const express = require('express');
-//const connectDB = require('./config/db');
+const connectDB = require('./config/db');
 //var cors = require('cors');
 
 // routes
@@ -10,7 +10,7 @@ const express = require('express');
 const app = express();
 
 // Connect Database
-//connectDB();
+connectDB();
 
 // cors
 //app.use(cors({ origin: true, credentials: true }));
