@@ -4,19 +4,8 @@
   "builds": [{ "src": "app.js", "use": "@now/node-server" }],
   "routes": [
     {
-      "src": "/",
-      "dest": "/routes/api/books.js",
-      "methods": ["GET"]
-    },
-    {
-      "src": "/test",
-      "dest": "/routes/api/books.js",
-      "methods": ["GET"]
-    },
-    {
-      "src": "/:id",
-      "dest": "/routes/api/books.js",
-      "methods": ["GET"]
+      "src": "/routes/api/(.*)",
+      "dest": "/routes/api/books.js"
     }
   ]
 }
