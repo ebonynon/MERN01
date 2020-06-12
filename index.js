@@ -1,32 +1,28 @@
-const express = require("express");
+// app.js
+
+const express = require('express');
+//const connectDB = require('./config/db');
+//var cors = require('cors');
+
+// routes
+//const books = require('./routes/api/books');
+
 const app = express();
 
-const port = 5000;
+// Connect Database
+//connectDB();
 
-// Body parser
-app.use(express.urlencoded({ extended: false }));
+// cors
+//app.use(cors({ origin: true, credentials: true }));
 
-// Home route
-app.get("/", (req, res) => {
-  res.send("Welcome to a basic express App");
-});
+// Init Middleware
+//app.use(express.json({ extended: false }));
 
-// Mock API
-app.get("/users", (req, res) => {
-  res.json([
-    { name: "William", location: "Abu Dhabi" },
-    { name: "Chris", location: "Vegas" }
-  ]);
-});
+app.get('/', (req, res) => res.send('Hello world!'));
 
-app.post("/user", (req, res) => {
-  const { name, location } = req.body;
+// use Routes
+//app.use('/api/books', books);
 
-  res.send({ status: "User created", name, location });
-});
+const port = 5000 //process.env.PORT || 8082;
 
-// Listen on port 5000
-app.listen(port, () => {
-  console.log(`Server is booming on port 5000
-Visit http://localhost:5000`);
-});
+app.listen(port, () => console.log(`Server running on port ${port}`));
