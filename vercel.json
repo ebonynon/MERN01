@@ -1,6 +1,16 @@
 {
   "name": "mongo01",
   "version": 2,
-  "builds": [{  "src": "index.js", "use": "@now/node-server" }]
+  "builds": [{ "src": "index.js", "use": "@now/node-server" }],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "index.js"
+    },
+    {
+      "src": "/api/books/(.*)",
+      "dest": "/routes/api/books.js"
+    }
+  ]
 }
 
