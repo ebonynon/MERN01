@@ -8,7 +8,7 @@
       "dest": "index.js",
     },
     {
-      "src": "/api/books/(.*)",
+      "src": "/api/books/.*",
       "dest": "/routes/api/books.js"
     }
   ]
