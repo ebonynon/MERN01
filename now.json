@@ -4,7 +4,7 @@
   "builds": [{ "src": "./app.js", "use": "@now/node-server" }],
   "routes": [
     {
-      "src": "/routes/api/(.*)",
+      "src": "/routes/api/.*",
       "dest": "/routes/api/books.js"
     }
   ]
