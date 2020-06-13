@@ -7,12 +7,8 @@
   },
   "routes": [
     {
-      "src": "/",
-      "dest": "appp.js"
-    },
-    {
       "src": "/api/books/(.*)",
-      "dest": "/routes/api/books.js"
+      "dest": "/routes/api/books"
     }
   ]
 }
