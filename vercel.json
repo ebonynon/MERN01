@@ -4,12 +4,6 @@
   "builds": [{ "src": "index.js", "use": "@now/node-server" }],
   "env": {
     "MONGODB_URI": "@my-mongodb-uri"
-  },
-  "routes": [
-    {
-      "src": "/api/books/(.*)",
-      "dest": "/routes/api/books.js"
-    }
-  ]
+  }
 }
 
