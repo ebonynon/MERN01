@@ -18,7 +18,8 @@
     },
     {
       "src": "/api/books/(.*)",
-      "dest": "/index.js"
+      "dest": "/index.js",
+      "methods": ["POST","GET","PUT","DELETE"]
     }
   ]
 }
