@@ -7,7 +7,7 @@
   },
   "routes": [
     {
-      "src": "/api/books/(.*)",
+      "src": ".*",
       "dest": "/index.js",
       "headers": {
         "Access-Control-Allow-Origin": "*",
@@ -15,6 +15,10 @@
         "Access-Control-Allow-Credentials": "true"
       },
       "continue": true
+    },
+    {
+      "src": "/api/books/(.*)",
+      "dest": "/index.js"
     }
   ]
 }
