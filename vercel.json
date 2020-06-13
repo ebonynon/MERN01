@@ -15,6 +15,10 @@
         "Access-Control-Allow-Credentials": "true"
       },
       "continue": true
+    },
+    {
+      "src": "/api/books/(.*)",
+      "dest": "/index.js"
     }
   ]
 }
