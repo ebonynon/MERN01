@@ -17,7 +17,7 @@
       "continue": true
     },
     {
-      "src": "/api/books/(.*)",
+      "src": "/api/books/.*",
       "dest": "/index.js",
       "methods": ["POST","GET","PUT","DELETE"],
       "headers": {
