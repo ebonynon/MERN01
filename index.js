@@ -2,7 +2,7 @@
 
 const express = require('express');
 const connectDB = require('./config/db');
-const userRouter = require('./routes/user');
+const userRouter = require('./routes/user'); //auth
 var cors = require('cors');
 
 // routes
@@ -10,7 +10,7 @@ const books = require('./routes/api/books');
 
 const app = express();
 
-app.use(userRouter);
+app.use(userRouter); //auth
 
 // Connect Database
 connectDB();
