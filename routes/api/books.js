@@ -40,7 +40,7 @@ router.post('/', (req, res) => {
 // @route GET api/books/:id
 // @description Update book
 // @access Public
-router.put('/:id', (req, res) => {
+router.put('/:id', auth, (req, res) => {
   Book.findByIdAndUpdate(req.params.id, req.body)
     .then(book => res.json({ msg: 'Updated successfully' }))
     .catch(err =>
@@ -51,7 +51,7 @@ router.put('/:id', (req, res) => {
 // @route GET api/books/:id
 // @description Delete book by id
 // @access Public
-router.delete('/:id', (req, res) => {
+router.delete('/:id', auth, (req, res) => {
   Book.findByIdAndRemove(req.params.id, req.body)
     .then(book => res.json({ mgs: 'Book entry deleted successfully' }))
     .catch(err => res.status(404).json({ error: 'No such a book' }));
