@@ -2,12 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 // Load Book model
-//const userRouter = require('../../routes/user'); //auth
 const Book = require('../../models/Book');
-
-//const app = express(); //xxx
-
-//app.use(userRouter); //auth
+const auth = require('../../middleware/auth') //auth
 
 // @route GET api/books/test
 // @description tests books route
