@@ -1,31 +1,46 @@
-// app.js
+// // app.js
 
-const express = require('express');
-const connectDB = require('./config/db');
-const userRouter = require('./routes/user'); //auth
-var cors = require('cors');
+// const express = require('express');
+// const connectDB = require('./config/db');
+// const userRouter = require('./routes/user'); //auth
+// var cors = require('cors');
 
-// routes
-const books = require('./routes/api/books');
+// // routes
+// const books = require('./routes/api/books');
 
-const app = express();
+// const app = express();
 
-app.use(userRouter); //auth
+// app.use(express.json()) //xx
+// app.use(userRouter); //auth
 
-// Connect Database
-connectDB();
+// // Connect Database
+// connectDB();
 
-// cors
-app.use(cors({ origin: true, credentials: true }));
+// // cors
+// app.use(cors({ origin: true, credentials: true }));
 
-// Init Middleware
-app.use(express.json({ extended: false }));
+// // Init Middleware
+// app.use(express.json({ extended: false }));
 
-app.get('/', (req, res) => res.send('Hello world!'));
+// app.get('/', (req, res) => res.send('Hello world!'));
 
-// use Routes
-app.use('/api/books', books);
+// // use Routes
+// app.use('/api/books', books);
 
-const port = process.env.PORT || 8082;
+// const port = process.env.PORT || 8082;
 
-app.listen(port, () => console.log(`Server running on port ${port}`));
+// app.listen(port, () => console.log(`Server running on port ${port}`));
+
+const express = require('express')
+const port = process.env.PORT || 8082
+const userRouter = require('./routes/user')
+require('./config/db')
+
+const app = express()
+
+app.use(express.json())
+app.use(userRouter)
+
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`)
+})
