@@ -34,9 +34,11 @@
 const express = require('express')
 const port = process.env.PORT || 8082
 const userRouter = require('./routes/user')
-require('./config/db')
+//require('./config/db.js.old')
+const connectDB = require('./config/db.js.old');
 
 const app = express()
+connectDB();
 
 app.use(express.json())
 app.use(userRouter)
