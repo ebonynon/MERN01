@@ -2,12 +2,15 @@
 
 const express = require('express');
 const connectDB = require('./config/db');
+const userRouter = require('./routers/user');
 var cors = require('cors');
 
 // routes
 const books = require('./routes/api/books');
 
 const app = express();
+
+app.use(userRouter);
 
 // Connect Database
 connectDB();
