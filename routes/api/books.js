@@ -2,12 +2,12 @@ const express = require('express');
 const router = express.Router();
 
 // Load Book model
-const userRouter = require('../../routes/user'); //auth
+//const userRouter = require('../../routes/user'); //auth
 const Book = require('../../models/Book');
 
-const app = express(); //xxx
+//const app = express(); //xxx
 
-app.use(userRouter); //auth
+//app.use(userRouter); //auth
 
 // @route GET api/books/test
 // @description tests books route
