@@ -3,7 +3,8 @@
   "version": 2,
   "builds": [{ "src": "index.js", "use": "@now/node-server" }],
   "env": {
-    "MONGODB_URI": "@my-mongodb-uri"
+    "MONGODB_URI": "@my-mongodb-uri",
+    "JWT_KEY": "@jwtkey"
   },
   "routes": [
     {
