@@ -23,9 +23,11 @@ app.use(cors({ origin: true, credentials: true }));
 app.use(express.json({ extended: false }));
 
 app.get("/", (req, res) => res.send("Hello world!"));
+app.get("/users", (req, res) => res.send("Hello user!"));
 
 // use Routes
 app.use("/api/books", books);
+app.use("/users", userRouter);
 
 const port = process.env.PORT || 8082;
 
