@@ -7,7 +7,8 @@ dotenv.config();
 const jwt_key = process.env.JWT_KEY;
 
 const auth = async (req, res, next) => {
-  const token = req.header("Authorization").replace("Bearer ", "");
+  //const token = req.header("Authorization").replace("Bearer ", "");
+  const token = req.header("Authorization");
 
   try {
     const data = jwt.verify(token, jwt_key);
