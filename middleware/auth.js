@@ -8,7 +8,7 @@ const jwt_key = process.env.JWT_KEY;
 
 const auth = async (req, res, next) => {
   //const token = req.header("Authorization").replace("Bearer ", "");
-  const token = req.header("Authorization");
+  const token = req.header("x-access-token");
 
   try {
     const data = jwt.verify(token, jwt_key);
