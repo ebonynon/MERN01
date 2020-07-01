@@ -7,8 +7,8 @@ dotenv.config();
 const jwt_key = process.env.JWT_KEY;
 
 const auth = async (req, res, next) => {
-  //const token = req.header("Authorization").replace("Bearer ", "");
-  const token = req.header("x-access-token");
+  //const token = req.header("Authorization").replace("Bearer ", ""); // for Spring Boot back-end
+  const token = req.header("x-access-token"); // for Node.js Express back-end
 
   try {
     const data = jwt.verify(token, jwt_key);
