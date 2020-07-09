@@ -57,4 +57,13 @@ router.delete("/:id", auth, (req, res) => {
     .catch((err) => res.status(404).json({ error: "No such a book" }));
 });
 
+/////////////////
+//const bodyParser = require('body-parser'); //pumal
+//express().use(bodyParser.urlencoded({ extended: true })); //pumal
+
+express().post('/post-test', (req, res) => {
+  console.log('Got body:', req.body);
+  res.sendStatus(200);
+});
+
 module.exports = router;
