@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const io = require('socket.io')(http);  //socket.io
 
 // Load Book model
 const Book = require("../../models/Book");
@@ -64,7 +63,6 @@ router.delete("/:id", auth, (req, res) => {
 
 express().post('/post-test', (req, res) => {
   console.log('Got body:', req.body);
-  io.emit('message', req.body);  //socket.io
   res.sendStatus(200);
 });
 
