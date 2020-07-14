@@ -51,7 +51,8 @@ router.put("/:id", auth, (req, res) => {
 // @route GET api/books/:id
 // @description Delete book by id
 // @access Public
-router.delete("/:id", auth, (req, res) => {
+//router.delete("/:id", auth, (req, res) => {
+router.delete("/:id", (req, res) => {
   Book.findByIdAndRemove(req.params.id, req.body)
     .then((book) => res.json({ mgs: "Book entry deleted successfully" }))
     .catch((err) => res.status(404).json({ error: "No such a book" }));
