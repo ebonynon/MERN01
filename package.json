@@ -2,7 +2,7 @@
   "name": "MERN01",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "start": "npm run shell",
     "app": "nodemon index.js",
