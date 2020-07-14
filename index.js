@@ -1,5 +1,5 @@
 // index.js
-
+const functions = require('firebase-functions');
 const express = require("express");
 const bodyParser = require("body-parser"); //pumal
 const socketIO = require("socket.io");
